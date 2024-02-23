@@ -113,3 +113,92 @@ body  {
     font-weight: bold;
 
 }
+
+.header{
+    
+    background-color: rgb(16, 16, 16);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.nav img{
+    width: 20px;
+    fill: white;
+}
+
+.bt-left{
+    background-color:black;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bt-right{
+    background-color:black;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+
+.buttons :nth-child(1){
+    background-color: rgb(16, 16, 16);
+    border-radius: 25px;
+    padding: 10px 25px;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    border: none;
+}
+
+.buttons :nth-child(1):hover{
+
+    transform: scale(1.1);
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+.buttons :nth-child(2){
+    background-color:white;
+    border-radius: 25px;
+    padding: 10px 25px;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    border: none;
+}
+
+.buttons :nth-child(2):hover{
+
+    transform: scale(1.1);
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: 500;
+}
