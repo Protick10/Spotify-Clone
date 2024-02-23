@@ -14,3 +14,20 @@
 .items-center{
     align-items: center;
 }
+
+.m-1{
+    margin:5px ;
+}
+
+.rounded{
+    border-radius: 7px;
+}
+
+
+.invert{
+    filter: invert(1);
+}
+
+.bg-grey{
+background-color: rgb(18, 18, 18);
+}
