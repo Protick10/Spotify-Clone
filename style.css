@@ -217,6 +217,8 @@ body  {
     margin: 20px 0px;
 }
 
+
+
 .card{
     width: 230px;
     height: 315px;
@@ -231,11 +233,12 @@ body  {
     background-color: rgb(54, 54, 54);
     transition: 0.5s;
     z-index: -1;
+    
 }
 
-.card img{
+.card img:nth-child(2){
     align-items: center;
-
+    position: relative;
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -261,3 +264,15 @@ body  {
     margin: 0px 3px 0px 15px;
     z-index: 1;
 }
+
+.card img:nth-child(1){
+    display: none;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    z-index: 10;
+    top: 43%;
+    left: 36%;
+
+}
+
