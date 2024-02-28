@@ -217,25 +217,37 @@ body  {
 }
 
 .right{
+    position: relative;
+    /* background-color: #fff; */
     /* margin: 5px   ; */
     /* margin-left: 1vw; */
 }
 
 .spotifyplaylist{
-    padding: 15px;
+    /* padding: 15px; */
+    /* position: relative; */
+
+   
+    /* height: 100%; */
     /* width: 100%; */
     /* width: 72vw; */
 
 }
 
+.spotifyplaylist h2{
+    /* padding: 15px; */
+    margin: 15px;
+}
+
 .cardcontainer{
-    margin: 20px 0px;
+    margin: 20px 15px;
     display: flex;
     flex-direction: row;
     gap: 20px;
     flex-wrap: wrap;
-    max-height: 50vh;
+    max-height: 60vh;
     overflow-y: scroll;
+    background-color: #161616;
     /* scrollbar-width: 2px; */
 }
 
@@ -313,5 +325,24 @@ body  {
     top: 43%;
     left: 36%;
 
+}
+
+.playbar{
+    background-color: rgb(188, 235, 188);
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+}
+
+.playbuttons{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
 }
 
