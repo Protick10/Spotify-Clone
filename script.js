@@ -33,8 +33,21 @@ async function fetchSongs() {
 
 
 async function main(){
+
+    // list of all the songs
     let songs = await fetchSongs();
     console.log(songs);
+ 
+    // Play the first song
+
+    var audio = new Audio(songs[0]);
+    // audio.play();
+
+    audio.addEventListener("loadeddata", () => {
+        let duration = audio.duration;
+        console.log(duration);
+        // The duration variable now holds the duration (in seconds) of the audio clip
+      }); 
 }
 
 main();

@@ -351,3 +351,14 @@ body  {
 .playbuttons img{
     width: 30px;
 }
+
+
+.songlist{
+    padding: 20px;
+}
+
+.songlist ul li{
+    list-style: none;
+    list-style-type: decimal;
+    margin: 7px 0px;
+}
