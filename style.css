@@ -344,5 +344,10 @@ body  {
     flex-direction: row;
     gap: 15px;
     align-items: center;
+
+
 }
 
+.playbuttons img{
+    width: 30px;
+}
