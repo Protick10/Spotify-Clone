@@ -94,7 +94,7 @@ body  {
 }
 
 .library::-webkit-scrollbar {
-    width: 10px; /* Width of the scrollbar */
+    width: 06px; /* Width of the scrollbar */
   }
   
   .library::-webkit-scrollbar-track {
@@ -384,6 +384,7 @@ body  {
     list-style-type: decimal;
     margin: 7px 0px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     /* gap: 25px; */
     cursor: pointer;

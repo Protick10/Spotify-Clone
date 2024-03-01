@@ -46,7 +46,16 @@ async function main(){
     for (const song of songs) {
 
         // songul.innerHTML = songul.innerHTML + song;
-        songul.innerHTML += `<li>${song.replaceAll("%20", " ")}</li>`;
+        songul.innerHTML += `<li>
+       
+        <img class="invert" src="music.svg" alt="">
+        <div class="info">
+            <div>${song.replaceAll("%20", " ").split("-")[0]}</div>
+            <div>${song.split("-")[1].replaceAll("%20", " ").split(".")[0]}</div>
+        </div>
+        <img src="play.svg" alt="" class="playimg invert">
+        
+        </li>`;
         
     }
  
