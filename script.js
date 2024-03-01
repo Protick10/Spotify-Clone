@@ -22,7 +22,9 @@ async function fetchSongs() {
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
         if(element.href.endsWith('.mp3')) {
-            songs.push(element.href);
+            // songs.push(element.href);
+            songs.push(element.href.split("/songs/")[1]); //will push whatever after /songs/ in the url
+
         }
     }
 
@@ -37,6 +39,16 @@ async function main(){
     // list of all the songs
     let songs = await fetchSongs();
     console.log(songs);
+
+
+    // Add the songs to the list
+    let songul = document.querySelector('.songlist').getElementsByTagName('ul')[0];   
+    for (const song of songs) {
+
+        // songul.innerHTML = songul.innerHTML + song;
+        songul.innerHTML += `<li>${song.replaceAll("%20", " ")}</li>`;
+        
+    }
  
     // Play the first song
 
