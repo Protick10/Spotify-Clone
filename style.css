@@ -88,8 +88,30 @@ body  {
     /* gap: 15px; */
     /* align-items: center; */
     padding: 20px;
-    min-height: 50vh;
+    /* min-height: 50vh; */
+    max-height: 50vh;
+    overflow-y: scroll;
 }
+
+.library::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
+  
+  .library::-webkit-scrollbar-track {
+    background: #333; /* Track color */
+  }
+  
+  .library::-webkit-scrollbar-thumb {
+    background-color: #666; /* Thumb color */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  .library::-webkit-scrollbar-thumb:hover {
+    background-color: #888; /* Thumb color on hover */
+  }
+
+
+
 .heading img{
     width: 30px;
 }
@@ -361,4 +383,25 @@ body  {
     list-style: none;
     list-style-type: decimal;
     margin: 7px 0px;
+    display: flex;
+    justify-content: space-between;
+    /* gap: 25px; */
+    cursor: pointer;
+    padding: 10px 5px;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 12px 0px;
+
+}
+
+
+.songlist ul li:hover{
+    background-color: rgb(43, 42, 42);
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.playimg{
+    width: 30px;
+    fill: white;
 }
