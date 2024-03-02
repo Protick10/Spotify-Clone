@@ -61,7 +61,7 @@ async function main(){
  
     // Play the first song
 
-    var audio = new Audio(songs[0]);
+    // var audio = new Audio(songs[0]);
     // audio.play();
 
     audio.addEventListener("loadeddata", () => {
