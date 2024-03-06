@@ -33,12 +33,21 @@ async function fetchSongs() {
 
 }
 
+//playMusic function toi play the music
+
+const playMusic = (track) => {
+    let audio = new Audio("songs/" + track);
+    audio.play();
+}
+
 
 async function main(){
 
+    let currentsong;
+
     // list of all the songs
     let songs = await fetchSongs();
-    console.log(songs);
+    // console.log(songs);
 
 
     // Add the songs to the list
@@ -58,17 +67,29 @@ async function main(){
         </li>`;
         
     }
+
+
+    //attach an event listener to each song
+
+    Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach(e=>{
+        e.addEventListener("click", ()=>{
+        console.log(e.querySelector(".info").firstElementChild.innerHTML);
+        // console.log(e);
+        
+        playMusic(e.querySelector(".info").firstElementChild.innerHTML); //trim to remove any leading or trailing spaces
+        })  
+    })
  
     // Play the first song
 
     // var audio = new Audio(songs[0]);
     // audio.play();
 
-    audio.addEventListener("loadeddata", () => {
-        let duration = audio.duration;
-        console.log(duration);
-        // The duration variable now holds the duration (in seconds) of the audio clip
-      }); 
+    // audio.addEventListener("loadeddata", () => {
+    //     let duration = audio.duration;
+    //     console.log(duration);
+    //     // The duration variable now holds the duration (in seconds) of the audio clip
+    //   }); 
 }
 
 main();
