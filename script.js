@@ -73,10 +73,13 @@ async function main(){
 
     Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach(e=>{
         e.addEventListener("click", ()=>{
-        console.log(e.querySelector(".info").firstElementChild.innerHTML);
+        // console.log(e.querySelector(".info").firstElementChild.innerHTML);
+        console.log(e.querySelector(".info").firstElementChild.innerHTML + "-" + e.querySelector(".info").lastElementChild.innerHTML+ ".mp3");
         // console.log(e);
         
-        playMusic(e.querySelector(".info").firstElementChild.innerHTML); //trim to remove any leading or trailing spaces
+        // playMusic(e.querySelector(".info").firstElementChild.innerHTML);
+         playMusic(e.querySelector(".info").firstElementChild.innerHTML + "-" + e.querySelector(".info").lastElementChild.innerHTML+ ".mp3");
+
         })  
     })
  
