@@ -1,5 +1,6 @@
 console.log('javascript started!');
 
+let currentsong = new Audio(); //to store the current song globally
 
 async function fetchSongs() {
     let a = await fetch("http://127.0.0.1:5500/songs/");
@@ -36,14 +37,15 @@ async function fetchSongs() {
 //playMusic function toi play the music
 
 const playMusic = (track) => {
-    let audio = new Audio("songs/" + track);
-    audio.play();
+    // let audio = new Audio("songs/" + track);
+    currentsong.src = "songs/" + track;
+    currentsong.play();
 }
 
 
 async function main(){
 
-    let currentsong;
+    // let currentsong;
 
     // list of all the songs
     let songs = await fetchSongs();
