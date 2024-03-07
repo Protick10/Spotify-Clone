@@ -2,6 +2,32 @@ console.log('javascript started!');
 
 let currentsong = new Audio(); //to store the current song globally
 
+//convert songtime to minutes and seconds format
+function convertTimeFormat(input) {
+    if (typeof input === 'number') {
+        // If input is a number, treat it as seconds and convert it to mm:ss format
+        var minutes = Math.floor(input / 60);
+        var seconds = Math.round(input % 60);
+        return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    } else if (typeof input === 'string') {
+        // If input is a string, assume it's in the format mm:ss.mmm
+        var parts = input.split(':');
+        var minutes = parseInt(parts[0]);
+        var seconds = parseFloat(parts[1]);
+
+        // Round seconds to nearest integer
+        seconds = Math.round(seconds);
+
+        // Formatting minutes and seconds
+        var formattedMinutes = String(minutes).padStart(2, '0');
+        var formattedSeconds = String(seconds).padStart(2, '0');
+
+        return formattedMinutes + ':' + formattedSeconds;
+    } else {
+        return 'Invalid input';
+    }
+}
+
 async function fetchSongs() {
     let a = await fetch("http://127.0.0.1:5500/songs/");
     let response = await a.text();
@@ -103,6 +129,14 @@ async function main(){
             currentsong.pause();
             play.src= "play.svg";
         }
+    })
+
+    //Listen for timeupdate event on the audio element to update the time of the song
+
+    currentsong.addEventListener("timeupdate", ()=>{
+        // console.log(currentsong.currentTime, currentsong.duration);
+        document.querySelector(".songtime").innerHTML = `${convertTimeFormat(currentsong.currentTime)} /
+         ${convertTimeFormat(currentsong.duration)}`;
     })
  
     // Play the first song
