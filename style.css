@@ -352,6 +352,7 @@ body  {
     flex-direction: row;
     gap: 15px;
     align-items: center;
+    cursor: pointer;
 
 
 }

@@ -40,6 +40,7 @@ const playMusic = (track) => {
     // let audio = new Audio("songs/" + track);
     currentsong.src = "songs/" + track;
     currentsong.play();
+    play.src= "pause.svg";  //change the play button to pause button
 }
 
 
@@ -83,6 +84,19 @@ async function main(){
          playMusic(e.querySelector(".info").firstElementChild.innerHTML + "-" + e.querySelector(".info").lastElementChild.innerHTML+ ".mp3");
 
         })  
+    })
+
+    //Attach an event listener to the play button, next button and previous button
+
+    play.addEventListener("click", ()=>{
+        if(currentsong.paused){
+            currentsong.play();
+            play.src= "pause.svg";
+        }
+        else{
+            currentsong.pause();
+            play.src= "play.svg";
+        }
     })
  
     // Play the first song
