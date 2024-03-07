@@ -41,6 +41,12 @@ const playMusic = (track) => {
     currentsong.src = "songs/" + track;
     currentsong.play();
     play.src= "pause.svg";  //change the play button to pause button
+
+    //to display the song name and artist name in the player
+
+    document.querySelector(".songname").innerHTML =track.replaceAll("%20", " ").split("-")[0]  ;
+    document.querySelector(".artistname").innerHTML = track.split("-")[1].replaceAll("%20", " ").split(".")[0];
+    document.querySelector(".songtime").innerHTML ="00:00 / 00:00";
 }
 
 

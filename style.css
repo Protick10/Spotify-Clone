@@ -337,11 +337,11 @@ body  {
 .playbar{
     background-color: rgb(104, 161, 104);
     display: flex;
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
     height: 10vh;
     width: 75%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: fixed;
     bottom: 10px;
     border-radius: 10px;
@@ -361,6 +361,33 @@ body  {
     width: 30px;
 }
 
+.songdetails{
+    margin-left:20px;
+    width: 20%;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+.songname{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    padding: 2px 0px;
+
+}
+.artistname{
+    font-size: 13px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    padding-top:3px ;
+    padding-bottom: 10px;
+}
+
+.songtime{
+    margin-right:20px;
+}
 
 .songlist{
     padding: 20px;
