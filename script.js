@@ -62,11 +62,15 @@ async function fetchSongs() {
 
 //playMusic function toi play the music
 
-const playMusic = (track) => {
+const playMusic = (track, pause=false) => {
     // let audio = new Audio("songs/" + track);
     currentsong.src = "songs/" + track;
-    currentsong.play();
-    play.src= "pause.svg";  //change the play button to pause button
+    if(!pause){
+        currentsong.play();
+
+        play.src= "pause.svg";  //change the play button to pause button
+    }
+   
 
     //to display the song name and artist name in the player
 
@@ -83,6 +87,7 @@ async function main(){
     // list of all the songs
     let songs = await fetchSongs();
     // console.log(songs);
+    playMusic(songs[0], true); //play the first song in the list
 
 
     // Add the songs to the list
