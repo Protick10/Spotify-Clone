@@ -142,6 +142,24 @@ async function main(){
         // console.log(currentsong.currentTime, currentsong.duration);
         document.querySelector(".songtime").innerHTML = `${convertTimeFormat(currentsong.currentTime)} /
          ${convertTimeFormat(currentsong.duration)}`;
+
+        //to update the progress bar
+
+        let progress = currentsong.currentTime / currentsong.duration * 100;
+
+        document.querySelector(".circle").style.left = progress + "%";
+        if(currentsong.currentTime == currentsong.duration){
+            // console.log("Song ended");
+            play.src= "play.svg";
+        }
+    })
+
+    //to change the song time when the progress bar is clicked
+
+    document.querySelector(".seekbar").addEventListener("click", (e)=>{
+        // console.log(e);
+        let newtime = e.offsetX / e.target.offsetWidth * currentsong.duration; //hjere offsetX is the distance from the left of the element and offsetWidth is the width of the element
+        currentsong.currentTime = newtime;
     })
  
     // Play the first song

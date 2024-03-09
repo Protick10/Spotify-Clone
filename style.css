@@ -44,6 +44,12 @@ body  {
 
 } */
 
+.home a img{
+    width: 120px;
+    fill: white;
+
+}
+
 .home1 a img{
     width: 30px;
     fill: white;
@@ -78,7 +84,7 @@ body  {
     /* font-weight: bold; */
 }
 
-.search img{
+.search a img{
     width: 30px;
 }
 
@@ -457,19 +463,20 @@ body  {
 .seekbar{
     height: 2px;
     width: 99%;
-    background: rgb(2, 85, 57) ;
-    border: 2px solid rgb(2, 85, 57);
+    background: rgb(231, 236, 235) ;
+    border: 2px solid rgb(231, 235, 233);
     border-radius: 10px;
     position: absolute;
     bottom: 3px;
     /* padding: 6px; */
     margin: 2px;
+    cursor: pointer;
 }
 
 .circle{
     width: 18px;
     height: 18px;
-    background-color: white;
+    background-color: rgb(233, 241, 239);
     border-radius: 50%;
     position: relative;
     bottom: 10px;
