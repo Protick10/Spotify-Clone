@@ -521,4 +521,41 @@ body  {
     .bt-right{
         display: none;
     }
+
+    .songname{
+        font-size: 15px;
+    }
+    .artistname{
+        font-size: 10px;
+    }
+
+    .songdetails{
+        width: 50%;
+    }
+
+  
+
+    .playbuttons{
+        width: 40%;
+        margin-right: 20px;
+    }
+
+    /* .playbuttons img{
+        width: 20px;
+    } */
+    .songtime{
+        width: 40%;
+        margin-right: 0px;
+    }
+    .playbuttons img{
+        width: 20px;
+    }
+
+    .seekbar{
+        width: 98%;
+    }
+
+
+
+    
 }
