@@ -494,12 +494,12 @@ body  {
 @media (max-width: 1440px) {
     
     .left{
-        background-color: #fff;
+        background-color: black;
         position: absolute;
         left: -100%;
         transition: all .3s;
         z-index: 100;
-        width: 233px;
+        width: 333px;
     }
 
     .right{

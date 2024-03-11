@@ -172,6 +172,14 @@ async function main(){
     //     console.log(duration);
     //     // The duration variable now holds the duration (in seconds) of the audio clip
     //   }); 
+
+    //to show the left portion on the mobile view..hamberger menu click event
+
+    document.querySelector(".hamburger").addEventListener("click", () => {
+        document.querySelector(".left").style.left = "0px";
+        document.querySelector(".left").style.zIndex = "200";
+        // document.querySelector(".header").style.display = "none";
+    });
 }
 
 main();
