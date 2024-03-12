@@ -180,6 +180,15 @@ async function main(){
         document.querySelector(".left").style.zIndex = "200";
         // document.querySelector(".header").style.display = "none";
     });
+
+    //to hide the left portion on the mobile view..cross click event
+
+    document.querySelector(".close").addEventListener("click", () => {
+        document.querySelector(".left").style.left = "-100%";
+        document.querySelector(".left").style.transition = "0.3s";
+        document.querySelector(".left").style.zIndex = "0";
+        // document.querySelector(".header").style.display = "block";
+    });
 }
 
 main();

@@ -491,6 +491,13 @@ body  {
     height: 30px;
 }
 
+.close{
+    display: none;
+    width: 30px;
+    height: 30px;
+
+}
+
 @media (max-width: 1440px) {
     
     .left{
@@ -555,6 +562,14 @@ body  {
         width: 98%;
     }
 
+    .close{
+        display: block;
+        position: absolute;
+
+        top: 25px;
+        right: 20px;
+    }
+    
 
 
     
