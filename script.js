@@ -189,6 +189,35 @@ async function main(){
         document.querySelector(".left").style.zIndex = "0";
         // document.querySelector(".header").style.display = "block";
     });
+
+    //play the next song when the next button is clicked
+
+    document.querySelector("#next").addEventListener("click", ()=>{
+        let currentsongname = currentsong.src.split("/songs/")[1];
+        let index = songs.indexOf(currentsongname);
+        if(index == songs.length - 1){
+            index = 0;
+        }
+        else{
+            index++;
+        }
+        playMusic(songs[index]);
+    })
+
+    //play the previous song when the previous button is clicked
+
+    document.querySelector("#previous").addEventListener("click", ()=>{
+        let currentsongname = currentsong.src.split("/songs/")[1];
+        console.log(currentsong.src);
+        let index = songs.indexOf(currentsongname);
+        if(index == songs.length - 1){
+            index = 0;
+        }
+        else{
+            index--;
+        }
+        playMusic(songs[index]);
+    })
 }
 
 main();

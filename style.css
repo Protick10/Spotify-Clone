@@ -570,6 +570,10 @@ body  {
         top: 25px;
         right: 20px;
     }
+
+    /* .cardcontainer{
+        justify-content: center;
+    } */
     
     .card{
         width: 150px;
