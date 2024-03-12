@@ -233,6 +233,7 @@ body  {
     /* background-color: #fff; */
     /* margin: 5px   ; */
     /* margin-left: 1vw; */
+    min-height: 90vh;
 }
 
 .spotifyplaylist{
@@ -257,7 +258,7 @@ body  {
     flex-direction: row;
     gap: 20px;
     flex-wrap: wrap;
-    max-height: 70vh;
+    max-height: 80vh;
     overflow-y: scroll;
     background-color: #161616;
     /* scrollbar-width: 2px; */
@@ -570,6 +571,23 @@ body  {
         right: 20px;
     }
     
+    .card{
+        width: 150px;
+        height: 220px;
+    }
+
+    .card img:nth-child(2){
+        width: 120px;
+        height: 120px;
+    }
+
+    .card h3{
+        font-size: 15px;
+    }
+
+    .card p{
+        font-size: 12px;
+    }
 
 
     
