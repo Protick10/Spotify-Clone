@@ -397,6 +397,7 @@ body  {
 .songtime{
     margin-right:20px;
     /* width: 25%;  */
+    margin-bottom: 10px;
 }
 
 .songlist{
@@ -499,6 +500,80 @@ body  {
 
 }
 
+.timevol{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    justify-content: center ;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.timevol img{
+    width: 25px;
+    fill: white;
+}
+
+.volume{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.range{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+
+/* .slider{
+    width: 80px;
+    height: 5px;
+    background-color: rgb(195, 213, 210);
+    color: white;
+    border-radius: 10px;
+    position: relative;
+    bottom: 10px;
+    cursor: pointer;
+
+} */
+
+.slider {
+    -webkit-appearance: none;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%; 
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+
 @media (max-width: 1440px) {
     
     .left{
@@ -552,7 +627,7 @@ body  {
         width: 20px;
     } */
     .songtime{
-        width: 40%;
+        width: 80%;
         margin-right: 0px;
     }
     .playbuttons img{
@@ -591,6 +666,11 @@ body  {
 
     .card p{
         font-size: 12px;
+    }
+
+    .timevol{
+        margin-right: 0px;
+        width: 200px;
     }
 
 
