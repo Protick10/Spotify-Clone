@@ -549,7 +549,7 @@ body  {
     width: 80px;
     height: 5px;
     border-radius: 5px;  
-    background: #d3d3d3;
+    background: #e0f2fa;
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
@@ -562,7 +562,7 @@ body  {
     width: 15px;
     height: 15px;
     border-radius: 50%; 
-    background: #04AA6D;
+    background: #323451;
     cursor: pointer;
   }
   
