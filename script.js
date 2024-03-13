@@ -218,6 +218,15 @@ async function main(){
         }
         playMusic(songs[index]);
     })
+
+
+    //add an event listener to the volume slider
+
+    document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change", (e)=>{
+        // console.log(e.target.value);
+        currentsong.volume = parseInt(e.target.value) / 100;
+        
+    })
 }
 
 main();

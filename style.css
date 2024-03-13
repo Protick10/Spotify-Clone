@@ -398,6 +398,7 @@ body  {
     margin-right:20px;
     /* width: 25%;  */
     margin-bottom: 10px;
+    /* size: 8px; */
 }
 
 .songlist{
@@ -552,8 +553,8 @@ body  {
     background: #e0f2fa;
     outline: none;
     opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+    -webkit-transition: .5s;
+    transition: opacity .5s;
   }
   
   .slider::-webkit-slider-thumb {
@@ -628,6 +629,7 @@ body  {
     } */
     .songtime{
         width: 80%;
+        
         margin-right: 0px;
     }
     .playbuttons img{
@@ -671,7 +673,19 @@ body  {
     .timevol{
         margin-right: 0px;
         width: 200px;
+        margin: 0px;
+        gap: 5px;
     }
+
+    .volume img{
+        width: 20px;
+    }
+
+    .slider{
+        width: 70px;
+    }
+
+
 
 
     
